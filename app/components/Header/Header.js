@@ -13,6 +13,9 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
           <Link className="router-link" to="/calendar">
             Calendar
           </Link>
+          <Link className="router-link" to="/reminder">
+            New Reminder
+          </Link>
         </div>
       </div>
     );

@@ -7,7 +7,13 @@ const makeSelectMetadata = () => createSelector(
   (globalState) => globalState.get('meta').toJS()
 );
 
+const makeSelectCurrentDate = () => createSelector(
+  selectCalendar,
+  (state) => state.get('currentDate')
+);
+
 export {
   selectCalendar,
   makeSelectMetadata,
+  makeSelectCurrentDate
 };

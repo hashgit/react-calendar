@@ -12,8 +12,10 @@ import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
 import MonthView from 'containers/MonthView/Loadable';
+import Reminder from 'containers/Reminder/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 import './style.scss';
 
 const App = () => (
@@ -28,8 +30,10 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={HomePage} />
       <Route path="/calendar" component={MonthView} />
+      <Route path="/reminder/:date?/:id?" component={Reminder} />
       <Route path="" component={NotFoundPage} />
     </Switch>
+    <Footer />
   </div>
 );
 

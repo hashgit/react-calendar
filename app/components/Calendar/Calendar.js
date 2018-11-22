@@ -1,18 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DayView from 'containers/DayView';
 import './style.scss';
-
-const WeekDay = (props) => (
-  <td className="calendarDay">
-    <div>
-      {props.date}
-    </div>
-  </td>
-);
-
-WeekDay.propTypes = {
-  date: PropTypes.any.isRequired,
-};
 
 const WeekRow = ({ weekStart, weekStartDate, maxDate }) => {
   const days = [];
@@ -22,7 +11,7 @@ const WeekRow = ({ weekStart, weekStartDate, maxDate }) => {
       date = '';
     }
 
-    days.push(<WeekDay date={date} key={i} />);
+    days.push(<DayView date={date} key={i} />);
   }
 
   return (

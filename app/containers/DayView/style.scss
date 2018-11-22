@@ -1,0 +1,21 @@
+.calendarDay {
+  width: 11%;
+  height: 150px;
+  border: 1px solid black;
+  vertical-align: bottom;
+}
+
+.reminders {
+  margin-right: 0;
+  margin-left: auto;
+  font-size: 0.7rem;
+}
+
+.dayView {
+  display: flex;
+}
+
+.date {
+  margin-top: auto;
+  margin-bottom: 0;
+}
